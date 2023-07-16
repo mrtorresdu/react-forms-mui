@@ -1,13 +1,16 @@
 {
   "name": "ts-react-form",
   "private": true,
+  "homepage": "https://mrtorresdu.github.io/react-forms-mui/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
@@ -32,6 +35,7 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.1",
+    "gh-pages": "^5.0.0",
     "typescript": "*",
     "vite": "^4.4.0"
   }
