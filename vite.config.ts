@@ -3,6 +3,6 @@ import react from '@vitejs/plugin-react-swc'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/react-forms-mui/',
   plugins: [react()],
-})
+  base: '/react-forms-mui/',
+});

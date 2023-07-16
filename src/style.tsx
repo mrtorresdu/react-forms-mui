@@ -1,6 +1,6 @@
-import { createTheme } from '@mui/material/styles';
+import { createTheme, responsiveFontSizes } from '@mui/material/styles';
 
-export const theme = createTheme({
+export let theme = createTheme({
   typography: {
     fontFamily: 'Roboto, sans-serif',
   },
@@ -17,7 +17,7 @@ export const theme = createTheme({
     // },
     // warning: {
     //   main: '#FF9800',
-    // },
+    // },o
     // info: {
     //   main: '#2196F3',
     // },
@@ -39,7 +39,7 @@ export const theme = createTheme({
       styleOverrides: {
         root: {
           '& .MuiFormLabel-root.MuiInputLabel-root': {
-            fontWeight: 900, 
+            fontWeight: 900,
           },
           '& .MuiInputBase-root': {
             fontWeight: 900,
@@ -61,13 +61,7 @@ export const theme = createTheme({
         },
       },
     },
-
-    // MuiOutlinedInput: {
-    //   styleOverrides: {
-    //     root: {
-    //       background: '#fff',
-    //     },
-    //   },
-    // },
   },
 });
+
+theme = responsiveFontSizes(theme);
