@@ -7,30 +7,8 @@ export let theme = createTheme({
   palette: {
     mode: 'light',
     primary: {
-      main: '#0037ff',
-    },
-    // secondary: {
-    //   main: '#007EF5',
-    // },
-    // error: {
-    //   main: '#007EF5',
-    // },
-    // warning: {
-    //   main: '#FF9800',
-    // },o
-    // info: {
-    //   main: '#2196F3',
-    // },
-    // success: {
-    //   main: '#4CAF50',
-    // },
-    background: {
-      default: '#FFFFFF',
-      paper: '#303030',
-    },
-    text: {
-      primary: '#ffffff',
-      secondary: '#ffffff',
+      main: '#53396f',
+      dark: '#795a9e',
     },
   },
 
@@ -41,16 +19,6 @@ export let theme = createTheme({
           '& .MuiFormLabel-root.MuiInputLabel-root': {
             fontWeight: 900,
           },
-          // '& .MuiOutlinedInput-root': {
-          //   fieldset: {
-          //     borderColor: '#ccc',
-          //     borderWidth: '2px',
-          //   },
-          //   '&:hover fieldset': {
-          //     borderColor: '#0037ff',
-          //     borderWidth: '3px',
-          //   },
-          // },
         },
       },
     },
@@ -58,32 +26,7 @@ export let theme = createTheme({
     MuiInputLabel: {
       styleOverrides: {
         root: {
-          color: '#ccc',
           fontWeight: 900,
-        },
-      },
-    },
-    MuiOutlinedInput: {
-      styleOverrides: {
-        notchedOutline: {
-          borderColor: '#ccc',
-          borderWidth: '1px',
-        },
-      },
-    },
-    MuiFormControl: {
-      styleOverrides: {
-        root: {
-          '& .MuiOutlinedInput-root': {
-            '&:hover fieldset': {
-              borderColor: '#0037ff',
-              borderWidth: '2px',
-            },
-            '&.Mui-focused fieldset': {
-              borderColor: '#0037ff',
-              borderWidth: '4px',
-            },
-          },
         },
       },
     },
