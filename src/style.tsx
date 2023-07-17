@@ -4,13 +4,16 @@ export let theme = createTheme({
   typography: {
     fontFamily: 'Roboto, sans-serif',
   },
-  palette: {
-    mode: 'light',
-    primary: {
-      main: '#53396f',
-      dark: '#795a9e',
-    },
-  },
+  // palette: {
+  //   mode: 'light',
+  //   primary: {
+  //     main: '#53396f',
+  //     dark: '#795a9e',
+  //   },
+  //   warning: {
+  //     main: '#ff9800',
+  //   },
+  // },
 
   components: {
     MuiTextField: {
