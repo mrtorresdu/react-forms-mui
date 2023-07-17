@@ -30,7 +30,7 @@ export let theme = createTheme({
     },
     text: {
       primary: '#ffffff',
-      secondary: '#ffffff)',
+      secondary: '#ffffff',
     },
   },
 
@@ -41,16 +41,16 @@ export let theme = createTheme({
           '& .MuiFormLabel-root.MuiInputLabel-root': {
             fontWeight: 900,
           },
-          '& .MuiOutlinedInput-root': {
-            fieldset: {
-              borderColor: '#ccc',
-              borderWidth: '2px',
-            },
-            '&:hover fieldset': {
-              borderColor: '#0037ff',
-              borderWidth: '3px',
-            },
-          },
+          // '& .MuiOutlinedInput-root': {
+          //   fieldset: {
+          //     borderColor: '#ccc',
+          //     borderWidth: '2px',
+          //   },
+          //   '&:hover fieldset': {
+          //     borderColor: '#0037ff',
+          //     borderWidth: '3px',
+          //   },
+          // },
         },
       },
     },
@@ -67,8 +67,7 @@ export let theme = createTheme({
       styleOverrides: {
         notchedOutline: {
           borderColor: '#ccc',
-          borderWidth: '3px',
-          fontWeight: 900,
+          borderWidth: '1px',
         },
       },
     },
@@ -78,11 +77,11 @@ export let theme = createTheme({
           '& .MuiOutlinedInput-root': {
             '&:hover fieldset': {
               borderColor: '#0037ff',
-              borderWidth: '3px',
+              borderWidth: '2px',
             },
             '&.Mui-focused fieldset': {
               borderColor: '#0037ff',
-              borderWidth: '3px',
+              borderWidth: '4px',
             },
           },
         },
