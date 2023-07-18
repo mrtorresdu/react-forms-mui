@@ -1,5 +1,6 @@
 import { Send } from '@mui/icons-material';
 import {
+  Autocomplete,
   Box,
   Button,
   Container,
@@ -16,6 +17,26 @@ import {
 import { Controller, useForm } from 'react-hook-form';
 import ButtonAppBar from './AppBar';
 
+const countries = [
+  { label: 'Afganistán', id: 'AF' },
+  { label: 'Alemania', id: 'DE' },
+  { label: 'Argentina', id: 'AR' },
+  { label: 'Australia', id: 'AU' },
+  { label: 'Brasil', id: 'BR' },
+  { label: 'Canadá', id: 'CA' },
+  { label: 'China', id: 'CN' },
+  { label: 'Colombia', id: 'CO' },
+  { label: 'España', id: 'ES' },
+  { label: 'Estados Unidos', id: 'US' },
+  { label: 'Francia', id: 'FR' },
+  { label: 'India', id: 'IN' },
+  { label: 'Italia', id: 'IT' },
+  { label: 'Japón', id: 'JP' },
+  { label: 'México', id: 'MX' },
+  { label: 'Reino Unido', id: 'GB' },
+  { label: 'Rusia', id: 'RU' },
+];
+
 function App() {
   const {
     register,
@@ -24,7 +45,7 @@ function App() {
     control,
     reset,
   } = useForm({
-    defaultValues: { name: '', email: '', shipmentMethod: '' },
+    defaultValues: { name: '', email: '', shipmentMethod: '', country: '' },
     mode: 'onChange',
     reValidateMode: 'onChange',
   });
@@ -113,6 +134,29 @@ function App() {
                       />
                       {errors.shipmentMethod && <FormHelperText>{errors.shipmentMethod.message}</FormHelperText>}
                     </FormControl>
+                  </Grid>
+                  <Grid item xs={12} sm={12}>
+                    <Controller
+                      name='country'
+                      control={control}
+                      rules={{ required: 'Please select country' }}
+                      render={({ field }) => (
+                        <Autocomplete
+                          options={countries}
+                          getOptionLabel={(option) => option.label}
+                          onChange={(_event,data) => field.onChange(data?.id || '')}
+                          renderInput={(params) => (
+                            <TextField
+                              {...params}
+                              label='Country'
+                              variant='outlined'
+                              error={!!errors.country}
+                              helperText={errors.country?.message}
+                            />
+                          )}
+                        />
+                      )}
+                    />
                   </Grid>
                 </Grid>
               </Grid>
