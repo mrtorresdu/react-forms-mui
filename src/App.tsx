@@ -140,11 +140,13 @@ function App() {
                       name='country'
                       control={control}
                       rules={{ required: 'Please select country' }}
-                      render={({ field }) => (
+                      render={({ field: { onChange, value } }) => (
                         <Autocomplete
                           options={countries}
-                          getOptionLabel={(option) => option.label}
-                          onChange={(_event,data) => field.onChange(data?.id || '')}
+                          value={countries.find((country) => country.id === value) || null}
+                          onChange={(_, data) => {
+                            onChange(data?.id ?? '');
+                          }}
                           renderInput={(params) => (
                             <TextField
                               {...params}
