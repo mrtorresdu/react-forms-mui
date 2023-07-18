@@ -4,6 +4,7 @@ import {
   Button,
   Container,
   FormControl,
+  FormHelperText,
   Grid,
   InputLabel,
   MenuItem,
@@ -60,7 +61,10 @@ function App() {
                   <Grid item xs={12} sm={12}>
                     <TextField
                       fullWidth
-                      {...register('name', { required: 'the name field is required', minLength: 2 })}
+                      {...register('name', {
+                        required: 'The name field is required',
+                        minLength: { value: 2, message: 'The name must have at least 2 characters' },
+                      })}
                       helperText={errors.name?.message}
                       error={!!errors.name}
                       label='Name'
@@ -107,6 +111,7 @@ function App() {
                           </Select>
                         )}
                       />
+                      {errors.shipmentMethod && <FormHelperText>{errors.shipmentMethod.message}</FormHelperText>}
                     </FormControl>
                   </Grid>
                 </Grid>
